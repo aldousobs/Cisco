@@ -1,0 +1,13 @@
+---
+- name: Check if Telnet is enabled
+  hosts: ios
+
+  tasks:
+  - name: TELNET CHECK
+    ios_command:
+      authorize: yes
+      commands:
+        - show run | beg line vty
+    register: vty
+
+  - debug: var=vty.stdout_lines
