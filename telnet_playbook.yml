@@ -1,6 +1,6 @@
 ---
 - name: Check if Telnet is enabled
-  hosts: ios
+  hosts: 192.168.1.105
 
   tasks:
   - name: TELNET CHECK
